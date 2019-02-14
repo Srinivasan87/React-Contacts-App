@@ -3,9 +3,15 @@ import React, { Component } from 'react'
 class ListContacts extends Component {
     render() {
         return (
-               <div>
-                   {'Hello World'}
-               </div> 
+            <ol ClassName='contact-List'>
+                {
+                    this.props.contacts.map((contact) => (
+                        <li key={contact.id}>
+                            {contact.name}
+                        </li>
+                    ))
+                }
+            </ol>
         )
     }
 }
